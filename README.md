@@ -1,4 +1,4 @@
-# xmas-game-jam-2024
+# [xmas-game-jam-2024](https://itch.io/jam/xmas-game-jam-2024)
 Theme: Woodland Folklore
 - swedish folklore?
 - christmas folklore?
