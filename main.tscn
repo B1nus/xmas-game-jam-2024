@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2gppb5moa6tw"]
+
+[ext_resource type="Texture2D" uid="uid://6c0qvcdskntm" path="res://placeholder-background.jpg" id="1_o02nl"]
+[ext_resource type="Texture2D" uid="uid://cdratmfewhetx" path="res://placeholder-ground.jpg" id="2_2ghbi"]
+[ext_resource type="Script" path="res://skogsrå.gd" id="2_ffslk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c70fv"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -449.0
+offset_right = 1661.0
+offset_bottom = 648.0
+texture = ExtResource("1_o02nl")
+expand_mode = 1
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Node2D" type="Node2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(608, 583)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/ParallaxLayer2/Node2D"]
+shape = SubResource("WorldBoundaryShape2D_c70fv")
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2/Node2D"]
+offset_left = -1590.0
+offset_right = 1599.0
+offset_bottom = 143.0
+texture = ExtResource("2_2ghbi")
+expand_mode = 1
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_ffslk")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(576, 324)

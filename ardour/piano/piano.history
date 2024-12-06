@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UndoHistory>
+  <UndoTransaction tv-sec="1733518970" tv-usec="413178" name="region drag">
+    <StatefulDiffCommand obj-id="1417" type-name="ARDOUR::MidiRegion">
+      <Changes>
+        <length from="b30720@b168960" to="b30720@b153600"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1417"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1417"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733518971" tv-usec="147237" name="kopiera objects">
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1206"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1206"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733518971" tv-usec="999849" name="paste">
+    <StatefulDiffCommand obj-id="266" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1706"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1206"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1206"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733518973" tv-usec="120865" name="region drag">
+    <StatefulDiffCommand obj-id="1706" type-name="ARDOUR::MidiRegion">
+      <Changes>
+        <length from="b30720@b168960" to="b30720@b184320"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1706"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1706"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733518973" tv-usec="874093" name="kopiera objects">
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1417"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1417"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733518974" tv-usec="756121" name="paste">
+    <StatefulDiffCommand obj-id="266" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1733"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1417"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1408" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1417"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519034" tv-usec="548987" name="kopiera objects">
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="331"/>
+            <Region id="1193"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="331"/>
+            <Region id="1193"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519034" tv-usec="809116" name="paste">
+    <StatefulDiffCommand obj-id="266" type-name="ARDOUR::MidiPlaylist">
+      <Changes>
+        <Regions>
+          <Add id="1765"/>
+          <Add id="1772"/>
+        </Regions>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="331"/>
+            <Region id="1193"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="331"/>
+            <Region id="1193"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519036" tv-usec="727024" name="region drag">
+    <StatefulDiffCommand obj-id="1765" type-name="ARDOUR::MidiRegion">
+      <Changes>
+        <length from="b30720@b46080" to="b30720@b245760"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1765"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1765"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519038" tv-usec="982922" name="region drag">
+    <StatefulDiffCommand obj-id="1772" type-name="ARDOUR::MidiRegion">
+      <Changes>
+        <length from="b30720@b76800" to="b30720@b276480"/>
+      </Changes>
+    </StatefulDiffCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1772"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1494" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1772"/>
+          </Regions>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519116" tv-usec="10960" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b30720" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b30720" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseObject" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1772"/>
+          </Regions>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseObject" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Regions>
+            <Region id="1772"/>
+          </Regions>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519119" tv-usec="708145" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b30720" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b61440" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519122" tv-usec="634599" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b61440" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b92160" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519124" tv-usec="441763" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b92160" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b107520" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519125" tv-usec="782414" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b107520" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b122880" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519127" tv-usec="336077" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b122880" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b130560" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519128" tv-usec="634568" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b130560" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b161280" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519130" tv-usec="56244" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b161280" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b253440" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519130" tv-usec="992253" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b253440" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b299520" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+  <UndoTransaction tv-sec="1733519132" tv-usec="160732" name="flytta markör">
+    <MementoCommand obj-id="58" type-name="ARDOUR::Locations">
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b299520" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+      <Locations>
+        <Location id="301" name="session" start="b0" end="b307200" flags="IsSessionRange" locked="0" timestamp="1733515112" cue="0"/>
+      </Locations>
+    </MementoCommand>
+    <MementoCommand obj-id="50" type-name="SelectionMemento">
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+      <SelectionMemento mouse-mode="MouseDraw" zoom="1697" left-frame="0" y-origin="126">
+        <Selection>
+          <Marker id="301" start="0"/>
+        </Selection>
+      </SelectionMemento>
+    </MementoCommand>
+  </UndoTransaction>
+</UndoHistory>
