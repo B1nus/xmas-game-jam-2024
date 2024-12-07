@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2gppb5moa6tw"]
+[gd_scene load_steps=6 format=3 uid="uid://b2gppb5moa6tw"]
 
-[ext_resource type="Texture2D" uid="uid://6c0qvcdskntm" path="res://placeholder-background.jpg" id="1_o02nl"]
-[ext_resource type="Texture2D" uid="uid://cdratmfewhetx" path="res://placeholder-ground.jpg" id="2_2ghbi"]
+[ext_resource type="Texture2D" uid="uid://6c0qvcdskntm" path="res://images/placeholder-background.jpg" id="1_o02nl"]
+[ext_resource type="Texture2D" uid="uid://cdratmfewhetx" path="res://images/placeholder-ground.jpg" id="2_2ghbi"]
 [ext_resource type="Script" path="res://skogsrå.gd" id="2_ffslk"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c70fv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_50mpx"]
+load_path = "res://.godot/imported/skogsrå-still.png-7906d58666322881b35a895db12e3e33.ctex"
 
 [node name="Node2D" type="Node2D"]
 
@@ -35,8 +38,17 @@ offset_bottom = 143.0
 texture = ExtResource("2_2ghbi")
 expand_mode = 1
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(576, 0)
+motion_mode = 1
 script = ExtResource("2_ffslk")
+sprite = NodePath("Sprite2D")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(576, 324)
+position = Vector2(0, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, 500)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_50mpx")
+offset = Vector2(150, 0)

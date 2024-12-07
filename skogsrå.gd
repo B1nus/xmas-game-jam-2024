@@ -1,7 +1,11 @@
 extends CharacterBody2D
 
 
-@export var speed: float = 300
+const speed: float = 500
+@export var sprite: Sprite2D
+
+var texture_moving = load('res://images/skogsrå-moving.svg')
+var texture_still = load('res://images/skogsrå-still.svg')
 
 
 func _physics_process(delta: float) -> void:
@@ -10,7 +14,13 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
+		sprite.flip_h = direction > 0
+		sprite.offset.x = direction * -150
+		sprite.texture = texture_moving
+		sprite.offset.y = sin(Time.get_unix_time_from_system() * 8) * 15
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
+		sprite.texture = texture_still
+		sprite.offset.y = sin(Time.get_unix_time_from_system()) * 25
 
 	move_and_slide()
