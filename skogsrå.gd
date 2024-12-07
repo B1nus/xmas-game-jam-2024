@@ -17,10 +17,10 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = direction > 0
 		sprite.offset.x = direction * -150
 		sprite.texture = texture_moving
-		sprite.offset.y = sin(Time.get_unix_time_from_system() * 8) * 15
+		sprite.offset.y = sin(Time.get_unix_time_from_system() * 12) * 15 - 100
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		sprite.texture = texture_still
-		sprite.offset.y = sin(Time.get_unix_time_from_system()) * 25
+		sprite.offset.y = sin(Time.get_unix_time_from_system()) * 25 - 100
 
 	move_and_slide()
