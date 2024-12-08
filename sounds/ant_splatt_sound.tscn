@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkrqd3v1tgxfk"]
+
+[ext_resource type="AudioStream" uid="uid://cwlrhqnwere11" path="res://music/mibbo_walk.mp3" id="1_gaoie"]
+[ext_resource type="Script" path="res://sounds/sound.gd" id="2_l1cg0"]
+
+[node name="AntSplattSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_gaoie")
+volume_db = -10.306
+pitch_scale = 1.21
+autoplay = true
+script = ExtResource("2_l1cg0")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

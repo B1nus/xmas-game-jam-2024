@@ -1,20 +1,77 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2gppb5moa6tw"]
+[gd_scene load_steps=17 format=3 uid="uid://b2gppb5moa6tw"]
 
 [ext_resource type="Texture2D" uid="uid://b8peti1r55ar3" path="res://images/background-daytime.svg" id="1_0pdx0"]
 [ext_resource type="Script" path="res://main.gd" id="1_5cfpm"]
 [ext_resource type="Texture2D" uid="uid://bhu37irjys5t" path="res://images/ground.svg" id="2_bqkth"]
 [ext_resource type="Script" path="res://skogsrå.gd" id="2_ffslk"]
+[ext_resource type="PackedScene" uid="uid://cq40oi3cukhmh" path="res://ant.tscn" id="2_pd1ku"]
+[ext_resource type="Texture2D" uid="uid://7lurwuvmr7q0" path="res://images/skogsrå-still.svg" id="5_c0vog"]
+[ext_resource type="PackedScene" uid="uid://ewdwo1prourq" path="res://Magic.tscn" id="5_kn6xu"]
+[ext_resource type="AudioStream" uid="uid://37bssmhvlorr" path="res://music/forest.mp3" id="6_msfcm"]
+[ext_resource type="AudioStream" uid="uid://dbjhpd4jtagch" path="res://music/daytime.mp3" id="9_rl263"]
+[ext_resource type="AudioStream" uid="uid://ds3aq8ccikpae" path="res://music/2024-12-08 'Game Nummer 500'.mp3" id="10_bi2k0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c70fv"]
+distance = -8.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_50mpx"]
-load_path = "res://.godot/imported/skogsrå-still.png-7906d58666322881b35a895db12e3e33.ctex"
+[sub_resource type="Theme" id="Theme_m8w5g"]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("nightbutton", "background", "ground")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r11tq"]
+bg_color = Color(7.21961e-08, 0.143676, 0.212101, 1)
+border_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_02pku"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l4pyk"]
+resource_name = "hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0.0166664, 1), Color(1, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30q6m"]
+_data = {
+"RESET": SubResource("Animation_02pku"),
+"hurt": SubResource("Animation_l4pyk")
+}
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("nightbutton", "forest_music", "daytime_music", "night_music", "background", "ground", "night_timer", "ant_timer")]
 script = ExtResource("1_5cfpm")
-nightbutton = NodePath("Button")
+nightbutton = NodePath("ColorRect/Button")
+forest_music = NodePath("ForestAmbiance")
+daytime_music = NodePath("AudioStreamPlayer")
+night_music = NodePath("NightMusic")
 background = NodePath("ParallaxBackground/ParallaxLayer/TextureRect")
 ground = NodePath("ParallaxBackground/ParallaxLayer2/Node2D/TextureRect")
+night_timer = NodePath("Timer2")
+ant_timer = NodePath("Timer")
+ant = ExtResource("2_pd1ku")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -31,17 +88,17 @@ texture = ExtResource("1_0pdx0")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="Node2D" type="Node2D" parent="ParallaxBackground/ParallaxLayer2"]
+[node name="Node2D" type="StaticBody2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(608, 583)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/ParallaxLayer2/Node2D"]
 shape = SubResource("WorldBoundaryShape2D_c70fv")
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2/Node2D"]
-offset_left = -1126.0
-offset_top = -272.0
-offset_right = 1881.0
-offset_bottom = 259.0
+offset_left = -1110.0
+offset_top = -802.0
+offset_right = 1897.0
+offset_bottom = 399.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_bqkth")
 expand_mode = 1
@@ -52,6 +109,7 @@ position = Vector2(576, 0)
 motion_mode = 1
 script = ExtResource("2_ffslk")
 sprite = NodePath("Sprite2D")
+magic = ExtResource("5_kn6xu")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 324)
@@ -61,15 +119,61 @@ limit_right = 1700
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(0, 500)
 scale = Vector2(0.3, 0.3)
-texture = SubResource("CompressedTexture2D_50mpx")
-offset = Vector2(150, -100)
+texture = ExtResource("5_c0vog")
+offset = Vector2(300, -100)
 
-[node name="Button" type="Button" parent="."]
-offset_left = 29.0
-offset_top = 15.0
-offset_right = 238.0
-offset_bottom = 93.0
-theme_override_font_sizes/font_size = 28
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+
+[node name="Timer2" type="Timer" parent="CharacterBody2D"]
+wait_time = 3.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+z_as_relative = false
+offset_left = -708.0
+offset_right = 2056.0
+offset_bottom = 648.0
+color = Color(1, 0, 0, 0)
+
+[node name="Button" type="Button" parent="ColorRect"]
+z_index = 1
+z_as_relative = false
+layout_mode = 0
+offset_left = 727.0
+offset_top = 17.0
+offset_right = 988.0
+offset_bottom = 99.0
+theme = SubResource("Theme_m8w5g")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_r11tq")
 text = "Start the night"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="ForestAmbiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_msfcm")
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rl263")
+volume_db = -12.18
+
+[node name="NightMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_bi2k0")
+volume_db = -22.336
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_30q6m")
+}
+
+[connection signal="input_event" from="CharacterBody2D" to="CharacterBody2D" method="_on_input_event"]
+[connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="CharacterBody2D/Timer2" to="CharacterBody2D" method="_on_timer_2_timeout"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

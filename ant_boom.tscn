@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxnhvcjgos8sf"]
+
+[ext_resource type="Script" path="res://ant_boom.gd" id="1_nmubf"]
+
+[sub_resource type="Curve" id="Curve_55ri3"]
+_data = [Vector2(0.14, 1), 0.0, 0.0, 0, 0, Vector2(0.713333, 0.692308), -1.82496, -1.82496, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_knah8"]
+curve = SubResource("Curve_55ri3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tqlba"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 4.32
+angle_min = -495.5
+angle_max = 402.6
+inherit_velocity_ratio = 0.45
+spread = 180.0
+initial_velocity_min = 69.88
+initial_velocity_max = 173.32
+gravity = Vector3(0, 30, 0)
+damping_max = 50.328
+scale_max = 6.38
+color = Color(0.517843, 0.0175318, 0.187301, 1)
+alpha_curve = SubResource("CurveTexture_knah8")
+hue_variation_min = -0.09
+hue_variation_max = 0.08
+turbulence_enabled = true
+
+[node name="AntBoom" type="GPUParticles2D"]
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_tqlba")
+explosiveness = 1.0
+collision_base_size = 0.0
+script = ExtResource("1_nmubf")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

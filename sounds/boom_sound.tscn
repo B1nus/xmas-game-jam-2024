@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk0tqgiviu2pi"]
+
+[ext_resource type="AudioStream" uid="uid://wk3e8pgqbb52" path="res://sounds/powch.mp3" id="1_lxlw3"]
+
+[node name="BoomSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_lxlw3")
+volume_db = -10.307

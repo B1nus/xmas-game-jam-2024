@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://2p58sgudtec5"]
+
+[ext_resource type="AudioStream" uid="uid://bacbm3khcrcgg" path="res://sounds/pop.mp3" id="1_0dltt"]
+[ext_resource type="Script" path="res://sounds/sound.gd" id="1_lwwio"]
+
+[node name="AntPopSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_0dltt")
+script = ExtResource("1_lwwio")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

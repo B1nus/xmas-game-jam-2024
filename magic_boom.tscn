@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://fqfdwfkr5pyx"]
+
+[ext_resource type="Script" path="res://magic_boom.gd" id="1_kcla3"]
+[ext_resource type="PackedScene" uid="uid://dk0tqgiviu2pi" path="res://sounds/boom_sound.tscn" id="5_efp7d"]
+[ext_resource type="PackedScene" uid="uid://do10yut3igp7b" path="res://sounds/magic_particles_sound.tscn" id="6_0uuq7"]
+
+[sub_resource type="Curve" id="Curve_obhwy"]
+_data = [Vector2(0.0333333, 1), 0.0, 0.0, 0, 0, Vector2(0.453333, 0.846154), 0.0, 0.0, 0, 0, Vector2(0.94, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jlqdq"]
+curve = SubResource("Curve_obhwy")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5gna5"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 2.57
+inherit_velocity_ratio = 1.0
+spread = 180.0
+initial_velocity_min = 108.82
+initial_velocity_max = 256.95
+gravity = Vector3(0, 1, 0)
+scale_max = 10.0
+scale_over_velocity_min = 100.71
+scale_over_velocity_max = 408.6
+alpha_curve = SubResource("CurveTexture_jlqdq")
+hue_variation_min = -2.23517e-08
+hue_variation_max = 0.00999998
+turbulence_enabled = true
+turbulence_noise_strength = 12.37
+turbulence_noise_scale = 2.947
+turbulence_influence_min = 0.065
+turbulence_influence_max = 0.13
+turbulence_initial_displacement_min = -18.2
+turbulence_initial_displacement_max = 16.2
+collision_use_scale = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmmbo"]
+radius = 99.5113
+
+[node name="MagicBoom" type="GPUParticles2D" node_paths=PackedStringArray("explody_area")]
+scale = Vector2(2, 2)
+emitting = false
+amount = 80
+process_material = SubResource("ParticleProcessMaterial_5gna5")
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("1_kcla3")
+explody_area = NodePath("Area2D")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wmmbo")
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[node name="BoomSound" parent="." instance=ExtResource("5_efp7d")]
+autoplay = true
+
+[node name="MagicParticlesSound" parent="." instance=ExtResource("6_0uuq7")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

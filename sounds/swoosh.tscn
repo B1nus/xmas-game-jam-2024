@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://djrhvhslxpycd"]
+
+[ext_resource type="AudioStream" uid="uid://cnn5b86ntf2qr" path="res://sounds/swoosh.mp3" id="1_gun33"]
+[ext_resource type="Script" path="res://sounds/sound.gd" id="2_qwhr4"]
+
+[node name="Swoosh" type="AudioStreamPlayer"]
+stream = ExtResource("1_gun33")
+volume_db = -13.117
+pitch_scale = 1.28
+autoplay = true
+script = ExtResource("2_qwhr4")
+start_time = 0.2

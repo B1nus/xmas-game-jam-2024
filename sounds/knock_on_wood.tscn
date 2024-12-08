@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://yxeq3j37rrao"]
+
+[ext_resource type="AudioStream" uid="uid://dst1was1e1vbs" path="res://sounds/knock_on_wood.mp3" id="1_p6g74"]
+[ext_resource type="Script" path="res://sounds/sound.gd" id="2_23p8p"]
+
+[node name="KnockOnWood" type="AudioStreamPlayer"]
+stream = ExtResource("1_p6g74")
+volume_db = 0.937
+autoplay = true
+script = ExtResource("2_23p8p")
